@@ -1,121 +1,136 @@
-html, body {
-  font-family: 'Lucida Sans Typewriter', monospace;
+html {
   height: 100%;
-  color: #fff;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
-  text-align: center;
+  min-height: 100%;
+  box-sizing: border-box;
 }
 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  text-align: center;
+
+  /**
+   * default fallback background
+   */
+  background: rgba(0,0,0,0.5) center/cover no-repeat center fixed;
+}
+
+/**
+ * Display Google font only when loaded
+ */
 .wf-active body {
   font-family: 'Droid Sans Mono';
 }
 
 .container {
-  min-height: 80%;
+  min-height: 60%;
 
-  display: -ms-flexbox;
   display: -webkit-flex;
-  display: flex;
+  display:  -ms-flexbox;
+  display:         flex;
   -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+       -ms-flex-align: center;
+          align-items: center;
 }
 
 .container-item {
-  padding: 5px;
   flex: 1 1 auto;
 }
 
+/**
+ * I like big buttons and I cannot lie.
+ */
 .btn {
   display: inline-block;
   padding: 6px 12px;
   margin: 5px;
   font-size: 150%;
-  border: 1px solid transparent;
   border-radius: 4px;
   color: #fff;
   width: 100px;
 }
 
-.btn:focus,
-.btn:active:focus,
-.btn.active:focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-
 .btn:hover,
 .btn:focus {
-  color: #333;
   text-decoration: none;
-}
-
-.btn:active,
-.btn.active {
-  outline: 0;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
-          box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+  color: #000;
 }
 
 .btn-green {
-  background-color: #5cb85c;
-  border-color: #4cae4c;
+  background-color: rgb(92,184,92);
+}
+
+.btn-green:hover, .btn-green:focus {
+  background-color: rgba(92,184,92,0.6);
 }
 
 .btn-blue {
-  background-color: #428bca;
-  border-color: #357ebd;
+  background-color: rgb(66,139,202);
+}
+
+.btn-blue:hover, .btn-blue:focus {
+  background-color: rgba(66,139,202,0.6);
 }
 
 .btn-yellow {
-  background-color: #f0ad4e;
-  border-color: #eea236;
+  background-color: rgb(240,173,78);
+}
+
+.btn-yellow:hover, .btn-yellow:focus {
+  background-color: rgba(240,173,78,0.7);
 }
 
 @media (max-width: 480px) {
-    html {
-      background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.5) 90%), url('background-img-sm.jpg') no-repeat center center fixed;
-      background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0.2) 0%,rgba(0,0,0,0.5) 90%), url('background-img-sm.jpg') no-repeat center center fixed;
-      background: radial-gradient(ellipse at center, rgba(255,255,255,0.2) 0%,rgba(0,0,0,0.5) 90%), url('background-img-sm.jpg') no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
+    /**
+     * add radiant background over image so text is easier to read
+     */
+    body {
+      background-image: radial-gradient(ellipse at center, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.5) 90%), url('background-img-sm.jpg');
     }
 
+    /**
+     * stack items (esp buttons) in a column when on small screens
+     */
     .container-item {
-      display: -ms-flexbox;
       display: -webkit-flex;
-      display: flex;
+      display:  -ms-flexbox;
+      display:         flex;
       -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
       -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
+                -ms-flex-pack: center;
+              justify-content: center;
     }
 }
 
 @media (min-width: 481px) {
-    html {
-      background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.5) 90%), url('background-img.jpg') no-repeat center center fixed;
-      background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0.2) 0%,rgba(0,0,0,0.5) 90%), url('background-img.jpg') no-repeat center center fixed;
-      background: radial-gradient(ellipse at center, rgba(255,255,255,0.2) 0%,rgba(0,0,0,0.5) 90%), url('background-img.jpg') no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
+    /**
+     * add radiant background over image so text is easier to read
+     */
+    body {
+      background-image: radial-gradient(ellipse at center, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.5) 90%), url('background-img.jpg');
     }
 
+    /**
+     * little larger font when on bigger screen
+     */
     .container-item {
       font-size: 110%;
     }
 
-    #desctext {
-      width: 70%;
+    /**
+     * bring the text in a little more on bigger screen
+     */
+    .textbody {
+      padding: 0 10%;
     }
 }
