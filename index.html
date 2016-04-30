@@ -7,9 +7,6 @@
         <title>Toni Wells : isometimescode.com : full-stack web development, engineer, and consultant</title>
         <link rel="icon" href="assets/favicon.ico">
         <link rel="me" href="https://plus.google.com/118395218965799040614">
-
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono" rel="stylesheet" type="text/css">
         <link href="assets/style.min.css" rel="stylesheet">
     </head>
     <body>
@@ -26,9 +23,9 @@
             </div>
 
             <div class="container-item">
-              <a role="button" href="http://goo.gl/forms/S00I8L8d1P" class="btn btn-success" aria-label="contact me"><i class="fa fa-envelope-o"></i></a>
-              <a role="button" href="http://www.linkedin.com/in/tmwells" class="btn btn-warning" aria-label="linkedin profile"><i class="fa fa-linkedin-square"></i></a>
-              <a role="button" href="http://www.github.com/isometimescode" class="btn btn-primary" aria-label="github profile"><i class="fa fa-github"></i></a>
+              <a role="button" href="http://goo.gl/forms/S00I8L8d1P" class="btn btn-green" aria-label="contact me" title="contact me"><i class="fa fa-envelope-o"></i></a>
+              <a role="button" href="http://www.linkedin.com/in/tmwells" class="btn btn-yellow" aria-label="linkedin profile" title="linkedin profile"><i class="fa fa-linkedin-square"></i></a>
+              <a role="button" href="http://www.github.com/isometimescode" class="btn btn-blue" aria-label="github profile" title="github profile"><i class="fa fa-github"></i></a>
             </div>
 
         </div>
@@ -39,9 +36,25 @@
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-          ga('create', 'UA-73238590-1', 'auto');
-          ga('send', 'pageview');
+          if (window.location.host.indexOf('localhost') === -1 &&
+              window.location.host.indexOf('192') === -1) {
+            ga('create', 'UA-73238590-1', 'auto');
+            ga('send', 'pageview');
+          } else {
+            console.log('skipping analytics for localhost');
+          }
 
+          WebFontConfig = {
+            google: {families:['Droid Sans Mono']},
+            custom: {families:['FontAwesome'],
+                     urls: ['https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css']}
+          };
+
+          (function(d) {
+            var wf = d.createElement('script'), s = d.scripts[0];
+            wf.src = 'https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.24/webfontloader.js';
+            s.parentNode.insertBefore(wf, s);
+          })(document);
         </script>
 
         <script type="application/ld+json">
