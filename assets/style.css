@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  font-family: 'Lucida Sans Typewriter',monospace;
   height: 100%;
   color: #fff;
   text-shadow: 0 1px 3px rgba(0,0,0,0.5);
@@ -43,6 +44,7 @@ body {
 
 .container-item {
   flex: 1 1 auto;
+  padding: 0 10%;
 }
 
 /**
@@ -125,12 +127,5 @@ body {
      */
     .container-item {
       font-size: 110%;
-    }
-
-    /**
-     * bring the text in a little more on bigger screen
-     */
-    .textbody {
-      padding: 0 10%;
     }
 }

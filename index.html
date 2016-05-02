@@ -7,9 +7,7 @@
         <title>Toni Wells : isometimescode.com : full-stack web development, engineer, and consultant</title>
         <link rel="icon" href="assets/favicon.ico">
         <link rel="me" href="https://plus.google.com/118395218965799040614">
-        <style type="text/css" media="screen">
-          body{color:#fff;text-align:center;background:rgba(0,0,0,.5);font-family:'Lucida Sans Typewriter',monospace}
-        </style>
+        <link rel="stylesheet" type="text/css" href="assets/style.min.css"/>
     </head>
     <body>
 
@@ -32,23 +30,8 @@
 
         </div>
 
-        <!-- css, webfonts, then analytics -->
-        <noscript id="js-deferred-styles">
-          <link rel="stylesheet" type="text/css" href="assets/style.min.css"/>
-        </noscript>
+        <!-- webfonts, then analytics -->
         <script>
-          var loadDeferredStyles = function() {
-            var addStylesNode = document.getElementById("js-deferred-styles");
-            var replacement = document.createElement("div");
-            replacement.innerHTML = addStylesNode.textContent;
-            document.body.appendChild(replacement)
-            addStylesNode.parentElement.removeChild(addStylesNode);
-          };
-          var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-              webkitRequestAnimationFrame || msRequestAnimationFrame;
-          if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
-          else window.addEventListener('load', loadDeferredStyles);
-
           WebFontConfig = {
             google: {families:['Droid Sans Mono']},
             custom: {families:['FontAwesome'],
@@ -66,13 +49,8 @@
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-          if (window.location.host.indexOf('localhost') === -1 &&
-              window.location.host.indexOf('192') === -1) {
-            ga('create', 'UA-73238590-1', 'auto');
-            ga('send', 'pageview');
-          } else {
-            console.log('skipping analytics for localhost');
-          }
+          ga('create', 'UA-73238590-1', 'auto');
+          ga('send', 'pageview');
         </script>
 
         <script type="application/ld+json">
