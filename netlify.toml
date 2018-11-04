@@ -7,9 +7,5 @@
 
 [build]
   base    = ""
-  publish = ""
-  command = ""
-
-[context.branch-deploy]
   publish = "public"
   command = "gatsby build"
