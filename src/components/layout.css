@@ -1,0 +1,20 @@
+#___gatsby, #___gatsby > *, .ui.grid.fullpage {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  /**
+   * default fallback background
+   */
+  background: rgba(0,0,0,0.5) center/cover no-repeat fixed !important;
+  min-height: 100%;
+}
+
+.column {
+  max-width: 70%;
+}
+
+.hidden {
+  display: none;
+}

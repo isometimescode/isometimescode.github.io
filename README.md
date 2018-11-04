@@ -1,3 +1,5 @@
 # Toni Wells: isometimescode.com
 
-Feel free to [contact me](https://goo.gl/forms/S00I8L8d1P) with new opportunities in software development.
+Feel free to [contact me](https://www.isometimescode.com/contact) with new opportunities in software development.
+
+Created with [GatsbyJS v2](https://github.com/gatsbyjs/gatsby).
