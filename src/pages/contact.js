@@ -53,6 +53,7 @@ class ContactPage extends React.Component {
             error={errors.form}
             onSubmit={this.handleSubmit}
           >
+            <input type="hidden" name="form-name" value="contact" />
             <Message error content="All fields are required." />
             <Form.Group widths="equal">
               <Form.Input
