@@ -30,7 +30,7 @@ const Layout = ({ children, title, jsonld }) => (
             left: 0,
             top: 0,
             width: '100%',
-            height: '100%',
+            minHeight: '100vh',
           }}
         />
         <SEO title={title} jsonld={jsonld} />

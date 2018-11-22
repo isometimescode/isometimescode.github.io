@@ -1,6 +1,9 @@
-#___gatsby, #___gatsby > *, .ui.grid.fullpage {
-  height: 100%;
-  min-height: 100%;
+#___gatsby, #___gatsby > * {
+  overflow: hidden;
+}
+
+.ui.grid.fullpage {
+  min-height: 100vh;
 }
 
 body {
@@ -8,7 +11,6 @@ body {
    * default fallback background
    */
   background: rgba(0,0,0,0.5) center/cover no-repeat fixed !important;
-  min-height: 100%;
 }
 
 .column {
