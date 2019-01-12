@@ -8,4 +8,4 @@
 [build]
   base    = ""
   publish = "public"
-  command = "gatsby build"
+  command = "echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production && gatsby build"

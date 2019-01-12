@@ -2,6 +2,9 @@ import React from 'react'
 import Layout from '../components/layout'
 import PageTitle from '../components/pagetitle'
 import { Segment, Form, Message } from 'semantic-ui-react'
+import Recaptcha from 'react-google-recaptcha'
+
+const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY
 
 class ContactPage extends React.Component {
   state = { fullname: false, email: false, message: false, form: false }
@@ -34,6 +37,10 @@ class ContactPage extends React.Component {
     }
   }
 
+  handleRecaptcha = value => {
+    this.setState({ "g-recaptcha-response": value });
+  }
+
   render() {
     const { ...errors } = this.state
 
@@ -50,6 +57,7 @@ class ContactPage extends React.Component {
             action="/success"
             data-netlify="true"
             data-netlify-honeypot="robots"
+            data-netlify-recaptcha="true"
             error={errors.form}
             onSubmit={this.handleSubmit}
           >
@@ -82,6 +90,14 @@ class ContactPage extends React.Component {
               error={errors.message}
             />
             <Form.Input name="robots" className="hidden" />
+            <Form.Field>
+              <Recaptcha
+                ref="recaptcha"
+                sitekey={RECAPTCHA_KEY}
+                onChange={this.handleRecaptcha}
+                size="compact"
+              />
+            </Form.Field>
             <Form.Button
               fluid
               primary
