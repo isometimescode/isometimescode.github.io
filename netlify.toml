@@ -6,6 +6,8 @@
 #    that is where we will look for package.json/.nvmrc/etc not repo root!
 
 [build]
-  base    = ""
   publish = "public"
-  command = "echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production && gatsby build"
+  command = "hugo --gc --minify"
+
+[context.branch-deploy]
+  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
