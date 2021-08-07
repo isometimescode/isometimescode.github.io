@@ -1,0 +1,17 @@
+baseURL: https://www.isometimesocde.com
+languageCode: en-us
+title: "Toni Wells"
+theme:
+- github.com/theNewDynamic/gohugo-theme-ananke
+googleAnalytics: UA-73238590-1
+enableRobotsTXT: true
+disableKinds:
+- taxonomy
+- term
+
+params:
+  favicon: "img/icon.png"
+  body_classes: "sans-serif bg-moon-gray"
+  description: "remote freelance full stack web developer, devops engineer, and consultant"
+  linkedin: https://www.linkedin.com/in/tmwells/
+  github: https://github.com/isometimescode
