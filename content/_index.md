@@ -1,6 +1,6 @@
 ---
 title: "Contact Me"
-featured_image: /img/background-img.jpg
+featured_image: /images/background-img.jpg
 ---
 
 ### Toni Wells

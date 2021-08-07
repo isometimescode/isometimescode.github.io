@@ -10,7 +10,7 @@ disableKinds:
 - term
 
 params:
-  favicon: "img/icon.png"
+  favicon: "images/icon.png"
   body_classes: "sans-serif bg-moon-gray"
   description: "remote freelance full stack web developer, devops engineer, and consultant"
   linkedin: https://www.linkedin.com/in/tmwells/
