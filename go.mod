@@ -1,5 +1,5 @@
 module github.com/isometimescode/isometimescode.github.io
 
-go 1.16
+go 1.18
 
-require github.com/theNewDynamic/gohugo-theme-ananke v2.6.7+incompatible // indirect
+require github.com/theNewDynamic/gohugo-theme-ananke v0.0.0-20220610193657-470ea40982f5 // indirect
