@@ -3,7 +3,7 @@ languageCode: en-us
 title: "Toni Wells"
 theme:
 - github.com/theNewDynamic/gohugo-theme-ananke
-googleAnalytics: UA-73238590-1
+googleAnalytics: "G-0WTESB43ES"
 enableRobotsTXT: true
 disableKinds:
 - taxonomy

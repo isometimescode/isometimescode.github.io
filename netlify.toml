@@ -10,15 +10,16 @@
   command = "hugo --gc --minify"
 
 [context.production.environment]
-  HUGO_VERSION = "0.101.0"
+  HUGO_VERSION = "0.112.7"
   HUGO_ENV = "production"
   HUGO_ENABLEGITINFO = "true"
-  GO_VERSION = "1.18.4"
-  PYTHON_VERSION = "3.8"
-  NODE_VERSION = "16"
+  GO_VERSION = "1.20.4"
 
 [context.branch-deploy]
   command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy.environment]
-  HUGO_VERSION = "0.101.0"
+  HUGO_VERSION = "0.112.7"
+  HUGO_ENV = "production"
+  HUGO_ENABLEGITINFO = "true"
+  GO_VERSION = "1.20.4"
